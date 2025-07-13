@@ -1,6 +1,10 @@
 function adicionar(value){
     document.getElementById("visor").value += value;
 }
+function multiplicar(){
+    var visor = document.getElementById("visor");
+    
+}
 function limpar(value){
     document.getElementById("visor").value = ''
 }
@@ -15,4 +19,8 @@ function calcular(){
     {
         visor.value = "Erro"
     }
+}
+function porcentagem(){
+    var visor = document.getElementById("visor")
+    visor.value = visor.value/100
 }
