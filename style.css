@@ -1,11 +1,16 @@
 .calculator{
     width: 250px;
+    height: 350px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 5px;
     padding: 10px;
-    background-color: rgb(110, 110, 110, 0.5);
+    background-color: rgb(110, 110, 110, 1);
 }
 #visor{
     grid-column: span 4;
+    font-size: 30px;
+}
+button{
+    border-radius: 50px;
 }
