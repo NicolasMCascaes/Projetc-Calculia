@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+    
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+#form-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.959);
+    width: 500px;
+}
+input{
+    
+    width: 300px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid silver;/*Esse atributo faz com que eu consiga fazer uma linha só no meu input, deixando minimalista*/
+    color: aliceblue;
+    outline: none;/*Esse atributo faz com que ao clicar no input, não apareça uma borda feia ao redor*/
+    transition: transform 0.2s ease-in-out;
+}
+label{
+    color: gray;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+::placeholder{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+a{
+    display: inline-block;
+    font-size: 10px;
+    color: gray;
+    margin-bottom: 0;
+    transition: transform 0.2s ease-in-out;
+}
+a:hover{
+    transform: scale(1.1);
+}
+input:hover{
+    transform: scale(1.1);
+}
+header{
+    margin-top: 0;
+}
+form{
+    margin-top: 120px; 
+}
+
+#login{
+    font-family: OCR A Std, monospace;
+    color: aliceblue;
+}
+#calculia{
+    font-family: OCR A Std, monospace;
+    color: orangered;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px black inset !important;
+    -webkit-text-fill-color: aliceblue !important;
+}#rgtr-nw{
+    margin-left: 50px;
+}
+button{
+    background-color: rgba(255, 104, 16, 0.938);
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.2s ease-in-out;
+    color: white;
+    padding-left:10px ;
+    padding-right: 10px;
+    
+}
+button:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
