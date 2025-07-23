@@ -9,6 +9,11 @@
 <body>
     <div class="calculator">
         <input type="text" id="visor" readonly>
+            <button class="operator-button" onclick="radiciacao()">√</button>
+            <button class="operator-button" onclick="porcentagem()">%</button>
+            <button class="operator-button" onclick="adicionar('.')">,</button>
+            <button class="operator-button" onclick="apagar()">←</button>
+            
        
             <button class="number-button" onclick="adicionar('1')"> 1 </button>
             <button class="number-button"onclick="adicionar('2')"> 2 </button>
@@ -34,6 +39,8 @@
            
             
     </div>
+    <button class="explain-button" onclick="explainCalc()">Explicar</button>
     <script src="script.js"></script>
+    
 </body>
 </html>

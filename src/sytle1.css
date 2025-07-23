@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: flex;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: px;
+    background-color: rgba(102, 102, 102, 0.61);
+    margin-left: 0px;
+    width: 600px;
+    
+}
+
