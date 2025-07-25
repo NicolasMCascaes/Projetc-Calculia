@@ -65,6 +65,7 @@ form{
 #calculia{
     font-family: OCR A Std, monospace;
     color: orangered;
+    margin: 0px;
 }
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px black inset !important;
@@ -82,12 +83,30 @@ button{
     padding-left:10px ;
     padding-right: 10px;
     
+    
 }
 button:hover{
     transform: scale(1.1);
 }
-
-
+@media screen and (max-width:844px) {
+   body{
+    height: 100vh;
+   }
+    #form-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: none;
+   }
+   
+   #study-img{
+    display: none;
+    
+   }
+   form{
+    margin-bottom: 150px;
+   }
+}
 
 
 
