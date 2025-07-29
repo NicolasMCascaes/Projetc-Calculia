@@ -28,7 +28,6 @@ body{
     
 }
 input{
-    
     width: 300px;
     height: 20px;
     border: none;
@@ -42,44 +41,26 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.959) inset !important;
   -webkit-text-fill-color: aliceblue !important;
 }
-
 ::placeholder{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
 }
-a{
-    display: inline-block;
-    font-size: 10px;
-    color: gray;
-    margin-bottom: 0;
-    transition: transform 0.2s ease-in-out;
-}
-a:hover{
-    transform: scale(1.1);
-}
+
 input:hover{
     transform: scale(1.1);
 }
-header{
-    margin-top: 0;
-}
+
 form{
     margin-top: 120px; 
 }
 
-#login{
+#register{
     font-family: OCR A Std, monospace;
     color: aliceblue;
-    
 }
 #calculia{
     font-family: OCR A Std, monospace;
     color: orangered;
-    
-
-    
-}#rgtr-nw{
-    margin-left: 50px;
 }
 button{
     background-color: rgba(255, 104, 16, 0.938);
@@ -90,8 +71,6 @@ button{
     color: white;
     padding-left:10px ;
     padding-right: 10px;
-    
-    
 }
 button:hover{
     transform: scale(1.1);
@@ -114,7 +93,7 @@ button:hover{
    form{
     margin-bottom: 150px;
    }
-   #login{
+   #register{
     margin-top: 0px;
    }
    #calculia{
