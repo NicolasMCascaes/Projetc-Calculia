@@ -33,10 +33,14 @@ input{
     height: 20px;
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid silver;/*Esse atributo faz com que eu consiga fazer uma linha só no meu input, deixando minimalista*/
+    border-bottom: 1px solid silver;
     color: aliceblue;
-    outline: none;/*Esse atributo faz com que ao clicar no input, não apareça uma borda feia ao redor*/
+    outline: none;
     transition: transform 0.2s ease-in-out;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.959) inset !important;
+  -webkit-text-fill-color: aliceblue !important;
 }
 label{
     color: gray;
@@ -76,10 +80,8 @@ form{
     font-family: OCR A Std, monospace;
     color: orangered;
     
-}
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px black inset !important;
-    -webkit-text-fill-color: aliceblue !important;
+
+    
 }#rgtr-nw{
     margin-left: 50px;
 }
