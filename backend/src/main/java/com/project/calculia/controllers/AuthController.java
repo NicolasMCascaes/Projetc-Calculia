@@ -7,6 +7,7 @@ import com.project.calculia.models.Users;
 import com.project.calculia.services.UsersService;
 
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -31,10 +32,13 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String postMethodName(@RequestBody String entity) {
-        // TODO: process POST request
+    public ResponseEntity<?> login(@RequestBody Map<String, String> request) {
+        Optional<Users> user = usersService.buscarPorUsername(request.get("username"));
+        if (user.isPresent() && user.get().getUserPassword().matches(request.get("password"))) {
+            return ResponseEntity.ok(user);
+        }
 
-        return entity;
+        return ResponseEntity.status(401).body("Credenciais inválidas");
     }
 
 }
