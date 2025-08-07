@@ -1,8 +1,5 @@
 package com.project.calculia.models;
 
-import org.hibernate.annotations.CollectionId;
-
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

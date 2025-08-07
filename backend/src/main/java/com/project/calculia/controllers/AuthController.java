@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.calculia.models.Users;
+import com.project.calculia.security.JwtUtil;
 import com.project.calculia.services.UsersService;
 
 import java.util.Map;
@@ -34,8 +35,9 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> request) {
         Optional<Users> user = usersService.buscarPorUsername(request.get("username"));
-        if (user.isPresent() && user.get().getUserPassword().matches(request.get("password"))) {
-            return ResponseEntity.ok(user);
+        if (user.isPresent() && passwordEncoder.matches(request.get("password"), user.get().getUserPassword())) {
+            String token = JwtUtil.generateToken(user.get().getUsername());
+            return ResponseEntity.ok(Map.of("token", token));
         }
 
         return ResponseEntity.status(401).body("Credenciais inválidas");
