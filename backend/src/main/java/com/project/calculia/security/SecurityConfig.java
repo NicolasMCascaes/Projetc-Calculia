@@ -1,8 +1,5 @@
 package com.project.calculia.security;
 
-import java.security.AuthProvider;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,19 +12,18 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-
-import com.project.calculia.services.UsersService;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
     private final UserDetailsService userDetailsService;
-    private final JwtAuthFilter jwtauthfilter;
+    private final JwtAuthFilter jwtAuthFilter;
 
     public SecurityConfig(UserDetailsService userDetailsService, JwtAuthFilter jwtAuthFilter) {
         this.userDetailsService = userDetailsService;
-        this.jwtauthfilter = jwtAuthFilter;
+        this.jwtAuthFilter = jwtAuthFilter;
     }
 
     @Bean
@@ -35,7 +31,8 @@ public class SecurityConfig {
         http.csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(
-                        auth -> auth.requestMatchers("/auth/**").permitAll().anyRequest().authenticated());
+                        auth -> auth.requestMatchers("/auth/**").permitAll().anyRequest().authenticated())
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
