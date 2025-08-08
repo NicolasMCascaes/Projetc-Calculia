@@ -23,6 +23,10 @@ public class Users {
         this.userPassword = userPassword;
     }
 
+    public Users() {
+
+    }
+
     public long getIdUsers() {
         return IdUsers;
     }
