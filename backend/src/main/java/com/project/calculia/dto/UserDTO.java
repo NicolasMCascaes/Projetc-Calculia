@@ -1,14 +1,13 @@
 package com.project.calculia.dto;
 
-import com.project.calculia.models.Users;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 public class UserDTO {
+    @NotBlank(message = "O campo username não pode ser vazio")
     private String username;
+    @Size(min = 6, message = "A senha precisa ter ao menos 6 caracteres")
     private String password;
-
-    public Users transformToObject() {
-        return new Users(username, password);
-    }
 
     public String getUsername() {
         return username;
