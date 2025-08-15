@@ -9,7 +9,8 @@ function limpar(value){
     document.getElementById("visor").value = ''
 }
 function apagar(value){
-
+ let visorValue = document.getElementById("visor").value
+ document.getElementById("visor").value = visorValue.slice(0,-1)
 }
 function calcular(){
     var visor = document.getElementById("visor")
@@ -17,17 +18,25 @@ function calcular(){
     if(visor.value.includes("√") ){
         let numero = Number(visor.value.replace("√", ""))
         visor.value = Math.sqrt(numero)
-    }else{
+    }
+    if(isNaN(visor)){
+        visor.value = "Erro"
+    } else{
         visor.value = eval(visor.value)
     }
-    }catch(error)
-    {
+   }catch(error){
         visor.value = "Erro"
     }
 }
 function porcentagem(){
     var visor = document.getElementById("visor")
     visor.value = visor.value/100
+}
+function getResponse(){
+    var valor = document.getElementById("visor").value
+    if(valor == "Erro"){
+        window.alert("Você não pode explicar um valor errado!")
+    }
 }
 
 function explainCalc(){

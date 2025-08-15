@@ -1,19 +1,55 @@
 body{
     background-color: black;
+    margin: 0px;
 }
+.calculiaGui{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(46, 46, 46);
+    margin-top: none;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    list-style: none;
+    transition: transform 0.2s ease-in-out; 
+    padding: 0px;  
+}
+li{
+    transition: transform 0.2s ease-in-out;
+}
+li:hover{
+    transform: scale(1.1);
+}
+a{
+    text-decoration: none;
+    color: rgb(189, 189, 189);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: solid;
+    
+}
+
 .calculator{
     width: 250px;
     height: 350px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 5px;
-    padding: 10px;
+    padding: 15px;
     background-color: rgb(110, 110, 110, 1);
     border-radius: 10px;
+    margin-top: 30px;
 }
 #visor{
     grid-column: span 4;
     font-size: 30px;
+    padding: 5px;
 }
 button{
     border-radius: 50px;
@@ -28,11 +64,6 @@ button{
 }
 .other-button:hover{
     background-color: rgb(99, 99, 99);
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 input{
     border-radius: 5px;
@@ -70,6 +101,7 @@ input{
     backdrop-filter: blur(10px);
     padding: 50px;
     border-radius: 20px;
+    font-family:"Inter", sans-serif;
 }
 .close{
     position:absolute;
@@ -83,6 +115,7 @@ input{
     color: white;
     font-size: 20px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 .close:hover{
     transform: scale(1.1);
@@ -103,4 +136,16 @@ input{
 }
 .abrir .modal{
     animation: abrirjanela 0.6s;
+}
+#explain-button{
+    background-color: orangered;
+    padding: 20px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-size: medium;
+    transition: transform 0.2s ease-in-out;
+}
+#explain-button:hover{
+    transform: scale(1.1);
 }
