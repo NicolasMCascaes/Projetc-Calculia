@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="calculatorStyle.css">
     <title>Calculia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <ul>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="">Home</a></li>
+        </ul>
+    </header>
+    <main class="calculiaGui">
     <div class="calculator">
         <input type="text" id="visor" readonly>
             <button class="operator-button" onclick="adicionar('√')">√</button>
@@ -34,20 +44,25 @@
             <button class="other-button" onclick="limpar()"> C </button>
             <button type="submit" class="other-button" onclick="calcular()">=</button>
             <button class="operator-button"onclick="adicionar('/')">÷</button>
+            <button class="modal-button" onclick="explainCalc()">Explicar</button>
             
             
            
             
     </div>
-    <button class="explain-button" onclick="explainCalc()">Explicar</button>
+    
     <div class="janela-modal" id="janela-modal">
         <div class="modal">
             <button class="close" id="close">X</button>
-            <h1>Olá, eu sou uma janela-modal!</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque debitis libero quibusdam natus, sed minima deserunt totam voluptates quasi explicabo vero repellendus officiis animi sequi tenetur quas nihil ad perspiciatis.</p>
+            <h1>Como a IA da Calculia funciona?</h1>
+            <p>Basicamente, ela pega a expressão que está no visor da calculadora, resolve, analisa e responde como seu fosse um professor, de forma didática e objetiva!</p>
+            <p>Clique em <b>EXPLICAR</b> para entender melhor a expressão que você digitou na calculadora!</p>
+            <button type="submit" id="explain-button" onclick="getResponse()">Explicar</button>
             
         </div>
     </div>
+    </main>
+    
     <script src="script.js"></script>
     
 </body>

@@ -3,6 +3,8 @@ package com.project.calculia.controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.project.calculia.dto.DtoResponseUser;
+import com.project.calculia.dto.UserDTO;
 import com.project.calculia.models.Users;
 import com.project.calculia.security.JwtUtil;
 import com.project.calculia.services.UsersService;
@@ -27,9 +29,10 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> userRegister(@RequestBody Map<String, String> request) {
-        Users users = usersService.registerUser(request.get("username"), request.get("password"));
-        return ResponseEntity.ok(users);
+    public ResponseEntity<?> userRegister(@RequestBody UserDTO request) {
+        Users users = usersService.registerUser(request);
+        DtoResponseUser response = new DtoResponseUser(request.getUsername());
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping("/login")

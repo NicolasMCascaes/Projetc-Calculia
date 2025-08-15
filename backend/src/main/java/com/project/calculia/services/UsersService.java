@@ -6,6 +6,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.project.calculia.dto.UserDTO;
 import com.project.calculia.models.Users;
 import com.project.calculia.repository.UsersRepository;
 
@@ -19,9 +20,9 @@ public class UsersService {
         this.passwordEncoder = new BCryptPasswordEncoder();
     }
 
-    public Users registerUser(String username, String password) {
-        String encodedPassword = passwordEncoder.encode(password);
-        Users user = new Users(username, encodedPassword);
+    public Users registerUser(UserDTO users) {
+        String encodedPassword = passwordEncoder.encode(users.getPassword());
+        Users user = new Users(users.getUsername(), encodedPassword);
         return usersRepository.save(user);
     }
 
