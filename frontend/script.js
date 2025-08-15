@@ -19,9 +19,7 @@ function calcular(){
         let numero = Number(visor.value.replace("√", ""))
         visor.value = Math.sqrt(numero)
     }
-    if(isNaN(visor)){
-        visor.value = "Erro"
-    } else{
+    else{
         visor.value = eval(visor.value)
     }
    }catch(error){
@@ -34,7 +32,7 @@ function porcentagem(){
 }
 function getResponse(){
     var valor = document.getElementById("visor").value
-    if(valor == "Erro"){
+    if(valor == "Erro" || valor == "NaN"){
         window.alert("Você não pode explicar um valor errado!")
     }
 }

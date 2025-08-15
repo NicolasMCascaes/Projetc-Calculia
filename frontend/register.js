@@ -12,5 +12,8 @@ document.getElementById("register-form").addEventListener("submit", function(eve
         body:JSON.stringify(user)
     })
     .then(response => response.json())
-    .
+    .then(data => {
+        console.log("ok")
+        window.location.href="index.html"
+    })
 })
