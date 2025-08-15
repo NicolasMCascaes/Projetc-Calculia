@@ -9,6 +9,8 @@ import com.project.calculia.models.Users;
 import com.project.calculia.security.JwtUtil;
 import com.project.calculia.services.UsersService;
 
+import jakarta.validation.Valid;
+
 import java.util.Map;
 import java.util.Optional;
 
@@ -29,7 +31,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> userRegister(@RequestBody UserDTO request) {
+    public ResponseEntity<?> userRegister(@RequestBody @Valid UserDTO request) {
         Users users = usersService.registerUser(request);
         DtoResponseUser response = new DtoResponseUser(request.getUsername());
         return ResponseEntity.ok(response);
