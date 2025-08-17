@@ -4,7 +4,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
         username: document.getElementById("username").value,
         password: document.getElementById("password").value
     }
-    fetch("https://91a0c0e3559a.ngrok-free.app/auth/login",{
+    fetch("https://042c7a474392.ngrok-free.app/auth/login",{
         method:"POST",
         headers:{
             "Content-Type":"application/json",
