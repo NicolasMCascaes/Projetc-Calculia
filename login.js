@@ -11,7 +11,10 @@ document.getElementById("login-form").addEventListener("submit", function(event)
         },
         body: JSON.stringify(user)
     })
-    .then(response => response.json())
+    .then(response => {
+    if (!response.ok) throw new Error("HTTP error " + response.status);
+    return response.json();
+})
     .then(data =>{
         console.log("Ok")
         window.location.href = "calculia.html"
