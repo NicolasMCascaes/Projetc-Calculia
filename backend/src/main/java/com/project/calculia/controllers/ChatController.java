@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@CrossOrigin(origins = "https://projetc-calculia-me6d.vercel.app/")
 @RestController
 public class ChatController {
 
@@ -17,7 +16,7 @@ public class ChatController {
         this.chatModel = chatModel;
     }
 
-    @CrossOrigin(origins = "https://projetc-calculia-me6d.vercel.app")
+    @CrossOrigin(origins = "*")
     @PostMapping("/ai/prompt")
     public Map<String, String> generateResponse(@RequestBody String request) {
 
