@@ -11,7 +11,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
         },
         body: JSON.stringify(user)
     })
-    .then(response => response.json)
+    .then(response => response.json())
     .then(data =>{
         console.log("Ok")
         window.location.href = "calculia.html"
