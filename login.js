@@ -17,6 +17,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 })
     .then(data =>{
         console.log("Ok")
+        localStorage.setItem("token", data.token)
         window.location.href = "calculia.html"
     })
 })

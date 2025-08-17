@@ -44,7 +44,10 @@
             <button class="other-button" onclick="limpar()"> C </button>
             <button type="submit" class="other-button" onclick="calcular()">=</button>
             <button class="operator-button"onclick="adicionar('/')">÷</button>
+
             <button class="modal-button" onclick="explainCalc()">Explicar</button>
+            <button class="operator-button" onclick="adicionar('(')">(</button>
+            <button class="operator-button" onclick="adicionar(')')")>)</button>
             
             
            
@@ -58,6 +61,7 @@
             <p>Basicamente, ela pega a expressão que está no visor da calculadora, resolve, analisa e responde como seu fosse um professor, de forma didática e objetiva!</p>
             <p>Clique em <b>EXPLICAR</b> para entender melhor a expressão que você digitou na calculadora!</p>
             <button type="submit" id="explain-button" onclick="getResponse()">Explicar</button>
+            <div id="responseArea"></div>
             
         </div>
     </div>
