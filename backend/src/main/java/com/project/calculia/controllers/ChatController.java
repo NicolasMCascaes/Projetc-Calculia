@@ -17,6 +17,7 @@ public class ChatController {
         this.chatModel = chatModel;
     }
 
+    @CrossOrigin(origins = "https://projetc-calculia-me6d.vercel.app")
     @PostMapping("/ai/prompt")
     public Map<String, String> generateResponse(@RequestBody String request) {
 
