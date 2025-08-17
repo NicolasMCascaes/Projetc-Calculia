@@ -38,7 +38,6 @@ public class AuthController {
         return ResponseEntity.ok(response);
     }
 
-    @CrossOrigin(origins = "https://projetc-calculia-me6d.vercel.app/")
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> request) {
         Optional<Users> user = usersService.buscarPorUsername(request.get("username"));
