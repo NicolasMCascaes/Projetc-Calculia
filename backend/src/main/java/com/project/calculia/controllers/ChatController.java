@@ -16,7 +16,6 @@ public class ChatController {
         this.chatModel = chatModel;
     }
 
-    @CrossOrigin(origins = "*")
     @PostMapping("/ai/prompt")
     public Map<String, String> generateResponse(@RequestBody String request) {
 
