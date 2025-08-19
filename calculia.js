@@ -13,12 +13,7 @@ document.getElementById("explain-button").addEventListener("click", function(eve
             "message":"Você é um professor de matemática e precisa explicar a seguinte expressão:" + visorValue + "Você deve explicar de forma objetiva, clara, didática e sem nenhum erro"
         }) 
     })
-    .then(response =>{
-            if(!response.ok){
-                throw new Error("Erro HTTP " + response.status)
-            }
-            return response.ok
-        })
+    .then(response => response.ok)
         .then(data =>{
             document.getElementById("responseArea").innerText = data.generation
         })
