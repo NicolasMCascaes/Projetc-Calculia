@@ -3,7 +3,7 @@ document.getElementById("explain-button").addEventListener("click", function(eve
     var visorValue = document.getElementById("visor").value
     const token = localStorage.getItem("token")
     console.log(token)
-    fetch("https://87de6ad912ca.ngrok-free.app/ai/generate",{
+    fetch("https://87de6ad912ca.ngrok-free.app/ai/prompt",{
         method:"POST",
         headers:{
             "Content-Type":"application/json",
