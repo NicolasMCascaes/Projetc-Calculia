@@ -6,13 +6,13 @@ export default async function handler(req, res) {
         "Content-Type": "application/json",
         "ngrok-skip-browser-warning": "true"
       },
-      body: JSON.stringify(req.body)
+      body: JSON.stringify({ message: req.body.message })
     });
 
     const data = await response.json();
     res.status(200).json(data);
   } catch (error) {
     console.error("Erro no proxy:", error);
-    res.status(500).json({ error: "Erro no proxy" });
+    res.status(500).json({ error: "Erro no proxy: " + error.message });
   }
 }
