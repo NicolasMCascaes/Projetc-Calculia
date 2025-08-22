@@ -3,11 +3,12 @@ document.getElementById("explain-button").addEventListener("click", function(eve
     var visorValue = document.getElementById("visor").value
     const token = localStorage.getItem("token")
     console.log(token)
-    fetch("https://5983a25385a5.ngrok-free.app/ai/prompt",{
+    fetch("/api/proxy",{
         method:"POST",
         headers:{
             "Content-Type":"application/json",
-            "ngrok-skip-browser-warning": "true"
+            "ngrok-skip-browser-warning": "true",
+            "Authorization": "Bearer "+token
         },
         body:JSON.stringify({
             "message":"Você é um professor de matemática e precisa explicar a seguinte expressão:" + visorValue + "Você deve explicar de forma objetiva, clara, didática e sem nenhum erro"
