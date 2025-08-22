@@ -16,7 +16,8 @@ document.getElementById("explain-button").addEventListener("click", function(eve
     })
     .then(response => response.json())
         .then(data =>{
-            document.getElementById("responseArea").innerText = data.generation.output.text;
+            const text = data.generation?.text || "Não foi possível obter a resposta da IA.";
+            document.getElementById("responseArea").innerText = text;
         })
         .catch(error =>{
             console.error("Erro na requisição: ", error)

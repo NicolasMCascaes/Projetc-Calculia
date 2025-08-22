@@ -2,6 +2,7 @@ package com.project.calculia.controllers;
 
 import java.util.Map;
 
+import org.springframework.ai.chat.messages.AssistantMessage;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.model.Generation;
 import org.springframework.ai.chat.prompt.Prompt;
@@ -26,12 +27,13 @@ public class ChatController {
     }
 
     @PostMapping("/ai/prompt")
-    public Map<String, Generation> generateResponse(@RequestBody PromptRequest request) {
+    public Map<String, AssistantMessage> generateResponse(@RequestBody PromptRequest request) {
         String userMessage = request.getMessage();
         Prompt prompt = new Prompt(userMessage);
         ChatResponse chatResponse = chatModel.call(prompt);
         Generation responseText = chatResponse.getResult();
-        return Map.of("generation", responseText);
+        AssistantMessage text = responseText.getOutput();
+        return Map.of("generation", text);
     }
 
 }
