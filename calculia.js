@@ -7,6 +7,7 @@ document.getElementById("explain-button").addEventListener("click", function(eve
         method:"POST",
         headers:{
             "Content-Type":"application/json",
+            "ngrok-skip-browser-warning": "true"
         },
         body:JSON.stringify({
             "message":"Você é um professor de matemática e precisa explicar a seguinte expressão:" + visorValue + "Você deve explicar de forma objetiva, clara, didática e sem nenhum erro"
