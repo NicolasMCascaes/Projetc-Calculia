@@ -14,7 +14,7 @@ document.getElementById("explain-button").addEventListener("click", function(eve
             "message":"Você é um professor de matemática e precisa explicar a seguinte expressão:" + visorValue + "Você deve explicar de forma objetiva, clara, didática e sem nenhum erro"
         }) 
     })
-    .then(response => response.ok)
+    .then(response => response.json)
         .then(data =>{
             document.getElementById("responseArea").innerText = data.generation
         })
