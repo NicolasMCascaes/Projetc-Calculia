@@ -4,7 +4,7 @@ document.getElementById("register-form").addEventListener("submit", function(eve
         username: document.getElementById("username").value,
         password: document.getElementById("password").value
     }
-    fetch("http://localhost:8080/auth/register",{
+    fetch("https://3bfecf1dd230.ngrok-free.app/auth/register",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
