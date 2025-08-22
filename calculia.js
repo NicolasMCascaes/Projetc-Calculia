@@ -3,11 +3,10 @@ document.getElementById("explain-button").addEventListener("click", function(eve
     var visorValue = document.getElementById("visor").value
     const token = localStorage.getItem("token")
     console.log(token)
-    fetch("/api/proxy",{
+    fetch("https://3bfecf1dd230.ngrok-free.app/ai/prompt",{
         method:"POST",
         headers:{
             "Content-Type":"application/json",
-            "ngrok-skip-browser-warning": "true",
             "Authorization": "Bearer "+token
         },
         body:JSON.stringify({
