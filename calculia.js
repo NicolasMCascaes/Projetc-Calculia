@@ -3,7 +3,7 @@ document.getElementById("explain-button").addEventListener("click", function(eve
     var visorValue = document.getElementById("visor").value
     const token = localStorage.getItem("token")
     console.log(token)
-    fetch("https://3bfecf1dd230.ngrok-free.app/ai/prompt",{
+    fetch("http://localhost:8080/ai/prompt",{
         method:"POST",
         headers:{
             "Content-Type":"application/json",
@@ -15,8 +15,8 @@ document.getElementById("explain-button").addEventListener("click", function(eve
     })
     .then(response => response.json())
         .then(data =>{
-            const text = data.generation?.text || "Não foi possível obter a resposta da IA.";
-            document.getElementById("responseArea").innerText = text;
+            console.log(data)
+            document.getElementById("responseArea").innerText = data.generation;
         })
         .catch(error =>{
             console.error("Erro na requisição: ", error)
