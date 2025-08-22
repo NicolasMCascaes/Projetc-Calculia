@@ -3,7 +3,7 @@ document.getElementById("explain-button").addEventListener("click", function(eve
     var visorValue = document.getElementById("visor").value
     const token = localStorage.getItem("token")
     console.log(token)
-    fetch("http://localhost:8080/ai/prompt",{
+    fetch("/api/proxy",{
         method:"POST",
         headers:{
             "Content-Type":"application/json",
