@@ -10,7 +10,8 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
-    res.status(200).json(data);
+    const text = data.generation?.text || "Resposta vazia da IA";
+    res.status(200).json({ text });
   } catch (error) {
     console.error("Erro no proxy:", error);
     res.status(500).json({ error: "Erro no proxy: " + error.message });
