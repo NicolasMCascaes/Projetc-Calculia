@@ -26,12 +26,9 @@ public class ChatController {
     }
 
     @PostMapping("/ai/prompt")
-    public Map<String, Generation> generateResponse(@RequestBody PromptRequest request) {
+    public Map<String, String> generateResponse(@RequestBody PromptRequest request) {
         String userMessage = request.getMessage();
-        Prompt prompt = new Prompt(userMessage);
-        ChatResponse chatResponse = chatModel.call(prompt);
-        Generation responseText = chatResponse.getResult();
-        return Map.of("generation", responseText);
+        return Map.of("generation", this.chatModel.call(userMessage));
     }
 
 }
