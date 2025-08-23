@@ -84,7 +84,7 @@ input{
 .janela-modal{
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.527);
@@ -121,7 +121,7 @@ input{
     transform: scale(1.1);
 }
 .janela-modal.abrir{
-    display: flex;
+   display: flex;
 }
 @keyframes abrirjanela{
     from{
@@ -148,4 +148,25 @@ input{
 }
 #explain-button:hover{
     transform: scale(1.1);
+}
+.spinner{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top: 10px solid black;
+    animation: spin 0.6s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#responseArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
