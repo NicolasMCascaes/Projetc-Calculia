@@ -19,7 +19,7 @@ document.getElementById("explain-button").addEventListener("click", function(eve
     .then(response => response.json())
         .then(data =>{
             console.log(data)
-            document.getElementById("responseText").innerHTML = data.generation;
+            document.getElementById("responseText").innerText = data.generation;
         })
         .catch(error =>{
             console.error("Erro na requisição: ", error)
