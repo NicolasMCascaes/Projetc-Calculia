@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     try {
       // repassa para o backend
-      const response = await fetch("https://3bfecf1dd230.ngrok-free.app/ai/prompt", {
+      const response = await fetch("https://75140b7cf7b6.ngrok-free.app/ai/prompt", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
