@@ -172,3 +172,17 @@ input{
     0%{transform: rotate(0deg);}
     100%{transform: rotate(360deg);}
 }
+@media screen and (max-width:1018px) {
+   body{
+    width: 100vw;
+    height: 100vh;
+   }
+   header{
+    width: 100vw;
+    
+   }
+    .modal{
+        width: 90%;
+        font-size: 14px;
+    }
+}
