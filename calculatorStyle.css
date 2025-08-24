@@ -184,5 +184,6 @@ input{
     .modal{
         width: 90%;
         font-size: 14px;
+        min-width: auto;
     }
 }
