@@ -19,6 +19,10 @@ function calcular(){
         let numero = Number(visor.value.replace("√", ""))
         visor.value = Math.sqrt(numero)
     }
+    if(visor.value.includes("%")){
+        let numero = Number(visor.value.replace("%",""))
+        visor.value = numero/100
+    }
     else{
         visor.value = eval(visor.value)
     }
