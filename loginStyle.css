@@ -8,6 +8,7 @@ body{
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #form-div{
@@ -79,7 +80,7 @@ form{
 
     
 }#rgtr-nw{
-    margin-left: 50px;
+    margin-left: 30px;
 }
 button{
     background-color: rgba(255, 104, 16, 0.938);
@@ -95,6 +96,13 @@ button{
 }
 button:hover{
     transform: scale(1.1);
+}
+#offlineBttn{
+    text-decoration: none;
+    background-color: orangered;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
 }
 @media screen and (max-width:1018px) {
    body{

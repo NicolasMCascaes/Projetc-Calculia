@@ -14,19 +14,12 @@ function apagar(value){
 }
 function calcular(){
     var visor = document.getElementById("visor")
+    var expr = visor.value
+    expr = expr.replace(/(\d+(\.\d+)?)%/g, "$1/100" )
+    expr = expr.replace(/√(\d+(\.\d+)?)/g, "Math.sqrt($1)")
     try{
-    if(visor.value.includes("√") ){
-        let numero = Number(visor.value.replace("√", ""))
-        visor.value = Math.sqrt(numero)
-    }
-    if(visor.value.includes("%")){
-        let numero = Number(visor.value.replace("%",""))
-        visor.value = numero/100
-    }
-    else{
-        visor.value = eval(visor.value)
-    }
-   }catch(error){
+        visor.value = eval(expr)
+    }catch(error){
         visor.value = "Erro"
     }
 }
