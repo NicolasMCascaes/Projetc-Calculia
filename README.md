@@ -2,7 +2,7 @@
 
 Calculia é uma calculadora web inteligente que combina operações matemáticas com explicações didáticas geradas por Inteligência Artificial. A aplicação permite que estudantes realizem cálculos e recebam explicações detalhadas sobre as expressões matemáticas, como se tivessem um professor particular.
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 - **Calculadora completa**: operações básicas (+, -, ×, ÷), raiz quadrada (√), porcentagem (%), parênteses e decimais
 - **Explicações com IA**: o botão "Explicar" envia a expressão matemática para uma IA que responde de forma didática e objetiva
@@ -10,7 +10,7 @@ Calculia é uma calculadora web inteligente que combina operações matemáticas
 - **Modo offline**: a calculadora pode ser usada sem login (apenas as explicações com IA requerem autenticação)
 - **Design responsivo**: interface adaptada para desktop e dispositivos móveis
 
-## 🏗️ Estrutura do Projeto
+##  Estrutura do Projeto
 
 O projeto está organizado em **frontend** e **backend**:
 
@@ -91,7 +91,7 @@ Projetc-Calculia/
 | Ollama | Servidor local de modelos de IA |
 | Gemma3 (4B) | Modelo de linguagem para explicações matemáticas |
 
-## 🚀 Como Executar
+##  Como Executar
 
 ### Pré-requisitos
 
