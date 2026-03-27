@@ -10,6 +10,33 @@ Calculia é uma calculadora web inteligente que combina operações matemáticas
 - **Modo offline**: a calculadora pode ser usada sem login (apenas as explicações com IA requerem autenticação)
 - **Design responsivo**: interface adaptada para desktop e dispositivos móveis
 
+
+## 🛠️ Tecnologias
+
+### Frontend
+| Tecnologia | Descrição |
+|------------|-----------|
+| HTML5 | Estrutura das páginas |
+| CSS3 | Estilização e responsividade |
+| JavaScript | Lógica da calculadora e integração com a API |
+
+### Backend
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| Java | 21 | Linguagem principal |
+| Spring Boot | 3.5.5 | Framework web |
+| Spring Security | - | Autenticação e autorização |
+| Spring Data JPA | - | Acesso ao banco de dados |
+| PostgreSQL | - | Banco de dados relacional |
+| JJWT | 0.11.5 | Geração e validação de tokens JWT |
+| Spring AI (Ollama) | 1.0.0 | Integração com modelo de IA local |
+
+### IA
+| Componente | Descrição |
+|------------|-----------|
+| Ollama | Servidor local de modelos de IA |
+| Gemma3 (4B) | Modelo de linguagem para explicações matemáticas |
+
 ##  Estrutura do Projeto
 
 O projeto está organizado em **frontend** e **backend**:
@@ -64,32 +91,6 @@ Projetc-Calculia/
 └── api/
     └── proxy.js               # Proxy serverless (Vercel) para o backend
 ```
-
-## 🛠️ Tecnologias
-
-### Frontend
-| Tecnologia | Descrição |
-|------------|-----------|
-| HTML5 | Estrutura das páginas |
-| CSS3 | Estilização e responsividade |
-| JavaScript | Lógica da calculadora e integração com a API |
-
-### Backend
-| Tecnologia | Versão | Descrição |
-|------------|--------|-----------|
-| Java | 21 | Linguagem principal |
-| Spring Boot | 3.5.5 | Framework web |
-| Spring Security | - | Autenticação e autorização |
-| Spring Data JPA | - | Acesso ao banco de dados |
-| PostgreSQL | - | Banco de dados relacional |
-| JJWT | 0.11.5 | Geração e validação de tokens JWT |
-| Spring AI (Ollama) | 1.0.0 | Integração com modelo de IA local |
-
-### IA
-| Componente | Descrição |
-|------------|-----------|
-| Ollama | Servidor local de modelos de IA |
-| Gemma3 (4B) | Modelo de linguagem para explicações matemáticas |
 
 ##  Como Executar
 
